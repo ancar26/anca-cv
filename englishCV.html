@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anca-Lidia Rada – QA Automation Engineer</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; font-size: 9.5pt; color: #222; background: #fff; }
+  .page { display: flex; width: 210mm; min-height: 297mm; margin: 0 auto; }
+
+  /* SIDEBAR */
+  .sidebar { width: 62mm; background: #1a2e3b; color: #e8edf0; padding: 22px 16px; flex-shrink: 0; }
+  .sidebar h1 { font-size: 14.5pt; font-weight: 700; color: #fff; line-height: 1.2; margin-bottom: 2px; }
+  .sidebar .title { font-size: 8pt; color: #7eb8d4; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 18px; font-weight: 600; line-height: 1.4; }
+  .sidebar-section { margin-bottom: 15px; }
+  .sidebar-section h2 { font-size: 7.5pt; text-transform: uppercase; letter-spacing: 0.1em; color: #7eb8d4; border-bottom: 1px solid #2e4f63; padding-bottom: 4px; margin-bottom: 8px; font-weight: 700; }
+  .sidebar-section p, .sidebar-section li { font-size: 8.5pt; color: #c8d8e0; line-height: 1.5; }
+  .sidebar-section ul { padding-left: 0; list-style: none; }
+  .sidebar-section ul li::before { content: "▸ "; color: #7eb8d4; font-size: 7pt; }
+  .contact-item { display: flex; align-items: flex-start; gap: 6px; margin-bottom: 5px; font-size: 8.5pt; color: #c8d8e0; }
+  .contact-icon { color: #7eb8d4; width: 12px; flex-shrink: 0; font-size: 9pt; }
+
+  .skill-group { margin-bottom: 8px; }
+  .skill-group-title { font-size: 7.5pt; color: #7eb8d4; margin-bottom: 3px; font-weight: 600; }
+  .skill-tags { display: flex; flex-wrap: wrap; gap: 3px; }
+  .skill-tag { background: #2e4f63; color: #c8d8e0; font-size: 7pt; padding: 2px 6px; border-radius: 3px; }
+  .skill-tag.highlight { background: #1e6a8a; color: #fff; }
+
+  .lang-row { display: flex; justify-content: space-between; margin-bottom: 4px; font-size: 8pt; }
+  .lang-name { color: #fff; font-weight: 600; }
+  .lang-level { color: #7eb8d4; font-size: 7.5pt; }
+
+  /* MAIN */
+  .main { flex: 1; padding: 22px 20px 22px 22px; }
+  .section { margin-bottom: 13px; }
+  .section-title { font-size: 9pt; text-transform: uppercase; letter-spacing: 0.12em; color: #1a2e3b; font-weight: 700; border-bottom: 2px solid #7eb8d4; padding-bottom: 3px; margin-bottom: 9px; }
+
+  .about { font-size: 8.5pt; line-height: 1.6; color: #333; background: #f0f6fa; border-left: 3px solid #7eb8d4; padding: 8px 10px; border-radius: 0 4px 4px 0; }
+
+  .exp-item { margin-bottom: 11px; }
+  .exp-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1px; }
+  .exp-title { font-size: 9.5pt; font-weight: 700; color: #1a2e3b; }
+  .exp-date { font-size: 7.5pt; color: #5a7a8a; white-space: nowrap; }
+  .exp-company { font-size: 8pt; color: #5a7a8a; margin-bottom: 4px; }
+  .exp-item ul { padding-left: 12px; }
+  .exp-item ul li { font-size: 8.5pt; line-height: 1.5; color: #333; margin-bottom: 2px; }
+  .exp-item ul li strong { color: #1a2e3b; }
+  .tools-line { font-size: 7.5pt; color: #5a7a8a; margin-top: 4px; }
+  .tools-line span { color: #1e6a8a; font-weight: 600; }
+
+  .subsection { background: #f7fbfd; border-left: 2px solid #b0d8ea; padding: 5px 8px; margin: 5px 0 4px 0; border-radius: 0 3px 3px 0; }
+  .subsection-title { font-size: 7.5pt; font-weight: 700; color: #1a2e3b; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 3px; }
+  .subsection ul { padding-left: 10px; }
+  .subsection ul li { font-size: 8pt; line-height: 1.5; color: #333; margin-bottom: 1px; }
+
+  .ai-badge { display: inline-block; background: #e8f4f8; color: #1a6a8a; font-size: 7pt; padding: 1px 5px; border-radius: 3px; border: 1px solid #b0d4e8; margin-left: 4px; vertical-align: middle; font-weight: 600; }
+  .ci-badge { display: inline-block; background: #eaf4ec; color: #2a7a3a; font-size: 7pt; padding: 1px 5px; border-radius: 3px; border: 1px solid #a8d8b0; margin-left: 4px; vertical-align: middle; font-weight: 600; }
+
+  .edu-item { margin-bottom: 8px; }
+  .edu-title { font-size: 9pt; font-weight: 700; color: #1a2e3b; }
+  .edu-sub { font-size: 8pt; color: #5a7a8a; }
+  .edu-note { font-size: 8pt; color: #444; margin-top: 2px; }
+
+  .cert-row { display: flex; align-items: flex-start; gap: 6px; margin-bottom: 4px; }
+  .cert-check { color: #7eb8d4; font-weight: 700; font-size: 9pt; flex-shrink: 0; }
+  .cert-text { font-size: 8.5pt; color: #333; line-height: 1.4; }
+  .cert-year { font-size: 7.5pt; color: #5a7a8a; }
+
+  @media print {
+    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .page { width: 100%; margin: 0; }
+    .print-btn { display: none; }
+  }
+  .print-btn { position: fixed; top: 16px; right: 16px; background: #1a2e3b; color: #fff; border: none; padding: 9px 18px; border-radius: 6px; cursor: pointer; font-size: 10pt; z-index: 100; }
+  .print-btn:hover { background: #1e6a8a; }
+</style>
+</head>
+<body>
+<button class="print-btn" onclick="window.print()">⬇ Save as PDF</button>
+
+<div class="page">
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <h1>Anca-Lidia<br>Rada</h1>
+    <div class="title">QA Automation Engineer<br>& SDET</div>
+
+    <div class="sidebar-section">
+      <h2>Contact</h2>
+      <div class="contact-item"><span class="contact-icon">✉</span><span>anca.rada.dev@gmail.com</span></div>
+      <div class="contact-item"><span class="contact-icon">☎</span><span>+34 641 935 771</span></div>
+      <div class="contact-item"><span class="contact-icon">📍</span><span>Malaga, Spain<br>(Open to Remote)</span></div>
+      <div class="contact-item"><span class="contact-icon">in</span><span>linkedin.com/in/anca-rada</span></div>
+      <div class="contact-item"><span class="contact-icon">🌐</span><span>justbooked.org</span></div>
+    </div>
+
+    <div class="sidebar-section">
+      <h2>Technical Skills</h2>
+      <div class="skill-group">
+        <div class="skill-group-title">Automation Frameworks</div>
+        <div class="skill-tags">
+          <span class="skill-tag highlight">Playwright</span>
+          <span class="skill-tag highlight">Cypress</span>
+          <span class="skill-tag">Selenium</span>
+          <span class="skill-tag">Postman</span>
+          <span class="skill-tag">BrowserStack</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title">Languages</div>
+        <div class="skill-tags">
+          <span class="skill-tag highlight">JavaScript</span>
+          <span class="skill-tag highlight">TypeScript</span>
+          <span class="skill-tag">HTML/CSS</span>
+          <span class="skill-tag">PHP</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title">CI/CD & DevOps</div>
+        <div class="skill-tags">
+          <span class="skill-tag highlight">GitHub Actions</span>
+          <span class="skill-tag">GitLab CI</span>
+          <span class="skill-tag">Git</span>
+          <span class="skill-tag">Docker (basic)</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title">AI-Assisted QA</div>
+        <div class="skill-tags">
+          <span class="skill-tag highlight">GitHub Copilot</span>
+          <span class="skill-tag highlight">ChatGPT</span>
+          <span class="skill-tag">Claude</span>
+          <span class="skill-tag">AI Test Gen</span>
+          <span class="skill-tag">Prompt Eng.</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title">Tools & Tracking</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Jira</span>
+          <span class="skill-tag">Confluence</span>
+          <span class="skill-tag">Zephyr</span>
+          <span class="skill-tag">TestRail</span>
+          <span class="skill-tag">Trello</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title">Testing Types</div>
+        <div class="skill-tags">
+          <span class="skill-tag">E2E · API</span>
+          <span class="skill-tag">Mobile</span>
+          <span class="skill-tag">Regression</span>
+          <span class="skill-tag">Unit Testing</span>
+          <span class="skill-tag">Performance</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar-section">
+      <h2>Soft Skills</h2>
+      <ul>
+        <li>Cross-functional collaboration</li>
+        <li>Knowledge sharing & mentoring</li>
+        <li>Analytical & critical thinking</li>
+        <li>Clear technical communication</li>
+        <li>Agile / Scrum experience</li>
+        <li>Autonomous & self-directed</li>
+      </ul>
+    </div>
+
+    <div class="sidebar-section">
+      <h2>Languages</h2>
+      <div class="lang-row"><span class="lang-name">Romanian</span><span class="lang-level">Native</span></div>
+      <div class="lang-row"><span class="lang-name">English</span><span class="lang-level">Full Professional</span></div>
+      <div class="lang-row"><span class="lang-name">Spanish</span><span class="lang-level">Limited Working</span></div>
+      <div class="lang-row"><span class="lang-name">German</span><span class="lang-level">Limited Working</span></div>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <div class="main">
+    <div class="section">
+      <div class="section-title">About Me</div>
+      <div class="about">
+        QA Automation Engineer / SDET with <strong>9+ years of experience</strong> across SaaS, e-commerce, enterprise integration, and API-first products. Good in <strong>Playwright and Cypress</strong>, with a strong record of building automation frameworks from scratch as a sole QA. Deeply experienced in <strong>CI/CD integration</strong> and <strong>AI-assisted testing workflows</strong> — using AI tools strategically to design smarter test strategies while maintaining full technical oversight and control. Known for writing clean, maintainable test infrastructure and clear documentation that empowers entire teams.
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Experience</div>
+
+      <!-- FOODREADY -->
+      <div class="exp-item">
+        <div class="exp-header">
+          <span class="exp-title">SDET / QA Automation Engineer <span class="ai-badge">AI-Assisted QA</span><span class="ci-badge">CI/CD</span></span>
+          <span class="exp-date">Oct 2023 – Oct 2025</span>
+        </div>
+        <div class="exp-company">FoodReady · Remote · SaaS (Food Safety & Compliance)</div>
+
+        <div class="subsection">
+          <div class="subsection-title">🧠 AI-Assisted Testing Strategy</div>
+          <ul>
+            <li>Used AI tools (GitHub Copilot, ChatGPT, Claude) <strong>daily as a strategic layer</strong> — not just for convenience, but to challenge coverage assumptions, surface edge cases, and accelerate test design decisions.</li>
+            <li>Leveraged AI to <strong>generate and refine Playwright test scripts</strong>, cutting boilerplate time while carefully reviewing, adapting, and owning every generated output.</li>
+            <li>Applied AI for <strong>unit test generation</strong> across critical business logic, improving overall test coverage beyond the E2E layer.</li>
+            <li>Used AI to <strong>analyze bug reports and suggest missing test scenarios</strong>, reducing the chance of recurring issues post-release.</li>
+            <li>Maintained full technical control throughout — understood what the AI generated, why, and when to override or improve it.</li>
+          </ul>
+        </div>
+
+        <div class="subsection">
+          <div class="subsection-title">⚙️ CI/CD Pipeline Integration</div>
+          <ul>
+            <li>Configured <strong>GitHub Actions</strong> to trigger the full Playwright test suite on every pull request, giving developers immediate visibility into whether their changes broke existing flows.</li>
+            <li>Set up <strong>multi-environment test runs</strong> (dev, staging, production-mirror), ensuring that regressions were caught at the right stage before reaching users.</li>
+            <li>Maintained reliable pipeline health with clear pass/fail reporting and notifications, reducing developer dependency on manual QA sign-off for routine changes.</li>
+          </ul>
+        </div>
+
+        <div class="subsection">
+          <div class="subsection-title">🏗️ Framework Design & Test Strategy</div>
+          <ul>
+            <li>Designed and built the <strong>Playwright automation framework from scratch</strong> as the sole QA — covering architecture decisions, folder structure, selector strategy, and reusable utilities.</li>
+            <li>Wrote comprehensive <strong>framework documentation</strong>: how it was built, how to run tests, how to add new tests, and contribution guidelines for developers.</li>
+            <li>Increased automation coverage by <strong>15%</strong>; reduced critical bugs by <strong>20%</strong>; supported <strong>10% faster release cycles</strong>.</li>
+          </ul>
+        </div>
+
+        <div class="tools-line"><span>Tools:</span> Playwright · GitHub Actions · Postman · BrowserStack · JS/TS · Jira · Confluence · GitHub Copilot · ChatGPT · Claude</div>
+      </div>
+
+      <!-- RECRUIT INSTANTLY -->
+      <div class="exp-item">
+        <div class="exp-header">
+          <span class="exp-title">QA Automation Engineer</span>
+          <span class="exp-date">Nov 2021 – Aug 2023</span>
+        </div>
+        <div class="exp-company">Recruit Instantly · Remote · HR Tech SaaS</div>
+        <ul>
+          <li>Built the <strong>Cypress E2E automation framework from the ground up</strong> as sole QA — defined test architecture, naming conventions, and coverage strategy across the full product.</li>
+          <li>Authored <strong>framework documentation</strong> covering setup, test writing guidelines, and how developers could contribute tests alongside feature development.</li>
+          <li>Set up <strong>GitLab CI integration</strong> so test suites ran automatically on key branches, keeping the team informed of quality status without manual intervention.</li>
+          <li>Increased test reliability by <strong>25%</strong>; reduced recurring issues by <strong>40%</strong>; improved team workflow efficiency by <strong>30%</strong>.</li>
+        </ul>
+        <div class="tools-line"><span>Tools:</span> Cypress · GitLab CI · Postman · BrowserStack · JS/TS · Trello</div>
+      </div>
+
+      <!-- AXWAY -->
+      <div class="exp-item">
+        <div class="exp-header">
+          <span class="exp-title">QA Analyst</span>
+          <span class="exp-date">Feb 2020 – Oct 2021</span>
+        </div>
+        <div class="exp-company">Axway · Remote — Enterprise API Management & Data Integration</div>
+        <ul>
+          <li>Provided prompt feedback to developers via Postman test suites, reducing bug resolution time by <strong>30%</strong>.</li>
+          <li>Created and maintained thorough feature documentation, reducing dependency on senior colleagues and improving team autonomy.</li>
+          <li>Supported faster release cycles through continuous app health feedback and structured API testing.</li>
+        </ul>
+        <div class="tools-line"><span>Tools:</span> Postman · Selenium · Maven · MobaXterm · TortoiseSVN · Jira · Confluence</div>
+      </div>
+
+      <!-- EMAG -->
+      <div class="exp-item">
+        <div class="exp-header">
+          <span class="exp-title">QA Tester</span>
+          <span class="exp-date">Mar 2018 – Jan 2020</span>
+        </div>
+        <div class="exp-company">eMAG · Romania — Global E-Commerce Platform</div>
+        <ul>
+          <li>Improved seller marketplace quality by narrowing test scenarios and tracking root causes of critical issues.</li>
+          <li>Helped update product test strategy by analyzing, designing, and executing test cases and scripts.</li>
+        </ul>
+        <div class="tools-line"><span>Tools:</span> Jira · Codeception (PHP) · Confluence · SVN · E2E & Acceptance Testing</div>
+      </div>
+
+      <!-- OPERATIVE -->
+      <div class="exp-item">
+        <div class="exp-header">
+          <span class="exp-title">QA Tester (Intern → Junior)</span>
+          <span class="exp-date">Jun 2016 – Jan 2018</span>
+        </div>
+        <div class="exp-company">Operative · Romania — Global Broadcast Business Solutions</div>
+        <ul>
+          <li>Quickly identified root causes and similar problem areas, reducing overall issue count.</li>
+          <li>Assisted with test plans, test cases, and use cases; sorted issues by priority and severity.</li>
+        </ul>
+        <div class="tools-line"><span>Tools:</span> Jira · Confluence · Internal testing applications</div>
+      </div>
+    </div>
+
+    <!-- EDUCATION -->
+    <div class="section">
+      <div class="section-title">Education & Certifications</div>
+
+      <div class="edu-item">
+        <div class="edu-title">University of Craiova — Faculty of Informatics <span style="font-size:8pt; font-weight:400; color:#5a7a8a;">· inf.ucv.ro</span></div>
+        <div class="edu-sub">Bachelor's Degree in Computer Science · Romania</div>
+        <div class="edu-note">Foundations in programming, algorithms, data structures, and software engineering principles.</div>
+      </div>
+
+      <div class="edu-item">
+        <div class="edu-title">Școala Informală de IT <span style="font-size:8pt; font-weight:400; color:#5a7a8a;">· scoalainformala.ro</span></div>
+        <div class="edu-sub">Front-End Web Development Course · ~2022 · Romania</div>
+        <div class="edu-note">Practical training in HTML, CSS, and JavaScript — strengthened front-end understanding directly applicable to UI test automation and selector strategy.</div>
+      </div>
+
+      <div style="margin-top: 8px;">
+        <div class="cert-row">
+          <span class="cert-check">✓</span>
+          <span class="cert-text"><strong>ISTQB Certified Tester — Foundation Level (CTFL)</strong> <span class="cert-year">· ~2023 · ISTQB</span></span>
+        </div>
+        <div class="cert-row">
+          <span class="cert-check">✓</span>
+          <span class="cert-text">Playwright Test Automation — framework design, advanced selectors, multi-environment configuration</span>
+        </div>
+        <div class="cert-row">
+          <span class="cert-check">✓</span>
+          <span class="cert-text">AI-Assisted QA workflows — prompt engineering for test generation, coverage analysis, and bug refinement</span>
+        </div>
+        <div class="cert-row">
+          <span class="cert-check">✓</span>
+          <span class="cert-text">GitHub Actions CI/CD — pipeline configuration for automated test execution on pull requests</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>
