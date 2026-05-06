@@ -67,10 +67,15 @@
   .cert-text { font-size: 8.5pt; color: #333; line-height: 1.4; }
   .cert-year { font-size: 7.5pt; color: #5a7a8a; }
 
+  @page {
+    margin: 0;
+    size: A4;
+  }
   @media print {
     body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
     .page { width: 100%; margin: 0; }
     .print-btn { display: none; }
+    .exp-item { page-break-inside: avoid; }
   }
   .print-btn { position: fixed; top: 16px; right: 16px; background: #1a2e3b; color: #fff; border: none; padding: 9px 18px; border-radius: 6px; cursor: pointer; font-size: 10pt; z-index: 100; }
   .print-btn:hover { background: #1e6a8a; }
